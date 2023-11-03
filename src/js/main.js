@@ -48,6 +48,12 @@ import photoSlider from './photoSlider';
 import caseRealisedProjects from './caseRealisedProjects';
 import loadMoreNews from './loadMoreNews';
 import newsFixedSidebar from './newsFixedSidebar';
+import vacanciesIntroLink from './vacanciesIntroLink';
+import vacanciesValuesSwiper from './vacanciesValuesSwiper';
+import vacanciesReviewsSwiper from './vacanciesReviewsSwiper';
+import vacanciesModalsPattern from './vacanciesModalsPattern';
+import vacanciesModalOpen from './vacanciesModalOpen';
+import videoPlay from './videoPlay';
 import fixSections from './fixSections';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,6 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
     historySlider();
     revealHistoryBlock();
 
+    vacanciesIntroLink();
+    vacanciesValuesSwiper();
+    vacanciesReviewsSwiper();
+    vacanciesModalOpen();
+    vacanciesModalsPattern();
+    videoPlay();
+
     taskGallery();
     productsSlider();
     fixedHeader();
@@ -94,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {
         ScrollTrigger.refresh();
-        
+
 
         const sideMenu = document.querySelector('.side-menu');
         if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
